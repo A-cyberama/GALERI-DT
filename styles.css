@@ -1,0 +1,204 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f9f9;
+    color: #025a56;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #025a56, #5ce1e6);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#loginBtn {
+    background-color: white;
+    color: #025a56;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#loginBtn:hover {
+    background: #5ce1e6;
+    color: white;
+}
+
+/* Form Tambah Album */
+#add-gallery {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(2, 90, 86, 0.5), 0 8px 25px rgba(92, 225, 230, 0.5);
+}
+
+form input, form select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #025a56;
+    border-radius: 5px;
+}
+
+form button {
+    background: linear-gradient(90deg, #025a56, #5ce1e6);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #5ce1e6, #025a56);
+}
+
+/* Pencarian & Filter */
+#search-filter {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#searchInput, #filterCategory {
+    padding: 10px;
+    border: 2px solid #025a56;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Gallery Container */
+#gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Album Card */
+.album {
+    background: white;
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(2, 90, 86, 0.5), 0 6px 20px rgba(92, 225, 230, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(2, 90, 86, 0.7), 0 8px 25px rgba(92, 225, 230, 0.7);
+}
+
+.album img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.album h3 {
+    margin: 10px 0;
+    color: #025a56;
+}
+
+.album a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(90deg, #025a56, #5ce1e6);
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.album a:hover {
+    background: linear-gradient(90deg, #5ce1e6, #025a56);
+}
+
+/* Pratinjau Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Tombol Close */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Tombol Download */
+#download-section {
+    text-align: center;
+    margin: 20px;
+}
+
+#downloadAll {
+    background: linear-gradient(90deg, #025a56, #5ce1e6);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#downloadAll:hover {
+    background: linear-gradient(90deg, #5ce1e6, #025a56);
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    #gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .album {
+        width: 90%;
+    }
+}

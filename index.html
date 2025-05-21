@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARTUTTAUFIQGALERI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>DARUTTAUFIQGALERI</h1>
+        <button id="loginBtn">Login</button>
+    </header>
+
+    <!-- Form Tambah Link Galeri -->
+    <section id="add-gallery">
+        <h2>Tambah Album Baru</h2>
+        <form id="galleryForm">
+            <input type="text" id="albumName" placeholder="Nama Album" required>
+            <input type="text" id="albumLink" placeholder="Link Google Drive" required>
+            <input type="text" id="albumThumbnail" placeholder="Link Thumbnail (Opsional)">
+            <select id="albumCategory">
+                <option value="default">Pilih Kategori</option>
+                <option value="wisata">Wisata</option>
+                <option value="keluarga">Keluarga</option>
+                <option value="lainnya">Lainnya</option>
+            </select>
+            <button type="submit">Tambah Album</button>
+        </form>
+    </section>
+
+    <!-- Pencarian dan Filter -->
+    <section id="search-filter">
+        <input type="text" id="searchInput" placeholder="Cari album...">
+        <select id="filterCategory">
+            <option value="all">Semua Kategori</option>
+            <option value="wisata">Wisata</option>
+            <option value="keluarga">Keluarga</option>
+            <option value="lainnya">Lainnya</option>
+        </select>
+    </section>
+
+    <!-- Galeri Album -->
+    <main id="gallery-container">
+        <!-- Daftar album akan muncul di sini melalui JavaScript -->
+    </main>
+
+    <!-- Pratinjau Gambar -->
+    <div id="previewModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="previewImage" class="modal-content">
+    </div>
+
+    <!-- Fitur Unduhan -->
+    <section id="download-section">
+        <button id="downloadAll">Unduh Semua</button>
+    </section>
+
+    <script src="data1.js"></script>
+</body>
+</html>
